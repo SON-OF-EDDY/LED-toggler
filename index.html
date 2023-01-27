@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+    
+    <html>
+    
+    <button id="toggle-button">TOGGLE LED</button>
+    <p>LED CURRENT STATE:</p>
+    <p id="state-value">OFF</p>
+
+    <script>
+        
+        let ledValue = -1
+        let toggleButton = document.getElementById('toggle-button')
+        let stateValue = document.getElementById('state-value')
+
+        toggleButton.addEventListener('click', (event) => {
+            ledValue *= -1
+            if (ledValue == 1) {
+                stateValue.innerHTML = 'ON'
+            }  else {
+                stateValue.innerHTML = 'OFF'
+            }   
+        })
+
+    </script>
+
+    </body>
+    </html>
